@@ -4,7 +4,11 @@ pipeline {
     
     stages {
         stage('Build') {
-	
+            agent {
+                docker {
+                    image 'node:10'
+                }			    
+            }	
             steps {
                 sh 'sudo -u node npm install'
                 sh 'sudo -u node npm run build'
