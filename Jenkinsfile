@@ -7,7 +7,7 @@ pipeline {
             agent {
                 docker {
                     image 'node:10'
-			args '-u spark-user:spark-user'
+			args '-u root:spark-user'
                 }			    
             }	
             steps {
