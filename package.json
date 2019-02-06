@@ -4,8 +4,9 @@
   "description": "Angular Drum Machine",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run"
+    "test": "karma start karma.conf.js",
+    "build": "cd public/assets/ && bower install && cd ../.. && grunt build",
+    "start": "grunt dev"
   },
   "repository": {
     "type": "git",
